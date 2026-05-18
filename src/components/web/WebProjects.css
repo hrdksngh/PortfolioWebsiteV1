@@ -1,0 +1,540 @@
+/* =========================
+   WEB FEATURED PROJECT
+========================= */
+
+.project-category-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+    .project-category-header h2 {
+        display: inline-block;
+        margin-bottom: 1.2rem;
+        padding-bottom: 0.7rem;
+        font-size: 2rem;
+        letter-spacing: 1px;
+        position: relative;
+    }
+
+        .project-category-header h2::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 120%;
+            height: 2px;
+            background: linear-gradient( 90deg, rgba(255,145,90,0.95), rgba(160,120,255,0.35) );
+        }
+
+    .project-category-header p {
+        max-width: 720px;
+        margin: 0 auto;
+        color: rgba(255,255,255,0.62);
+        line-height: 1.9;
+    }
+
+/* =========================
+   FEATURED CARD
+========================= */
+
+.featured-project-card {
+    display: grid;
+    grid-template-columns: 1.62fr 0.92fr;
+    gap: 2.5rem;
+    padding: 2rem;
+    border-radius: 28px;
+    background: linear-gradient( to bottom, rgba(255,255,255,0.03), rgba(255,255,255,0.015) );
+    border: 1px solid rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    max-width: 1320px;
+    margin: 0 auto 3rem 0;
+}
+
+.featured-project-card-green .featured-label {
+    color: #008631;
+}
+
+.featured-project-card-green .featured-features h4 {
+    color: #008631;
+}
+
+.featured-project-card-green .live-demo-button {
+    background: #008631;
+    color: white;
+}
+
+    .featured-project-card-green .live-demo-button:hover {
+        background: #008631;
+        color: white;
+    }
+
+.featured-project-card-green .featured-features ul li::before {
+    color: #008631;
+}
+
+/* =========================
+   LEFT
+========================= */
+
+.featured-project-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.featured-main-image {
+    width: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.06);
+    height: 450px;
+}
+
+    .featured-main-image img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        filter: brightness(0.82) contrast(1.02) saturate(0.92);
+    }
+
+/* =========================
+   THUMBNAILS
+========================= */
+
+.featured-thumbnail-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.featured-thumbnail {
+    height: 120px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.06);
+    opacity: 0.65;
+    transition: opacity 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+}
+
+    .featured-thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .featured-thumbnail.active {
+        opacity: 1;
+        border-color: rgba(156,125,255,0.28);
+    }
+
+    .featured-thumbnail:hover {
+        opacity: 1;
+        transform: translateY(-2px);
+    }
+
+/* =========================
+   RIGHT
+========================= */
+
+.featured-project-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.featured-label {
+    text-align: left;
+    align-self: flex-start;
+    color: rgba(156,125,255,0.95);
+    letter-spacing: 1.4px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.featured-project-right h3 {
+    font-size: 2.25rem;
+    line-height: 1.05;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    align-self: flex-start;
+}
+
+.featured-description {
+    color: rgba(255,255,255,0.68);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 1.2rem;
+    text-align: left;
+    max-width: 400px;
+}
+
+/* =========================
+   TAGS
+========================= */
+
+.featured-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-bottom: 1.5rem;
+}
+
+    .featured-tags span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.34rem 0.72rem;
+        border-radius: 8px;
+        background: linear-gradient( to bottom, rgba(255,255,255,0.035), rgba(255,255,255,0.012) );
+        border: 1px solid rgba(255,255,255,0.055);
+        font-size: 0.70rem;
+        font-weight: 500;
+        line-height: 1;
+        color: rgba(255,255,255,0.76);
+        white-space: nowrap;
+    }
+
+.featured-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient( to right, rgba(255,255,255,0.08), transparent );
+    margin-bottom: 1.2rem;
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.featured-features h4 {
+    color: rgba(156,125,255,0.95);
+    letter-spacing: 1px;
+    margin-bottom: 0.9rem;
+    text-align: left;
+}
+
+.featured-features ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.37rem;
+    margin-bottom: 1.8rem;
+    padding-left: 0;
+}
+
+.featured-features li {
+    position: relative;
+    padding-left: 1.1rem;
+    color: rgba(255,255,255,0.68);
+    line-height: 1.2;
+    font-size: 0.88rem;
+    text-align: left;
+}
+
+    .featured-features li::before {
+        content: "◉";
+        position: absolute;
+        left: 0;
+        color: rgba(156,125,255,0.85);
+        font-size: 0.7rem;
+    }
+
+/* =========================
+   BUTTONS
+========================= */
+
+.featured-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.live-demo-button,
+.github-project-button {
+    height: 48px;
+    min-width: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.92rem;
+    transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.live-demo-button {
+    background: linear-gradient( to right, rgba(140,90,255,0.95), rgba(120,80,255,0.85) );
+    color: white;
+}
+
+    .live-demo-button:hover {
+        transform: translateY(-2px);
+    }
+
+.github-project-button {
+    border: 1px solid rgba(255,255,255,0.08);
+    background: linear-gradient( to bottom, rgba(255,255,255,0.03), rgba(255,255,255,0.015) );
+    color: rgba(255,255,255,0.88);
+}
+
+    .github-project-button:hover {
+        border-color: rgba(156,125,255,0.24);
+        transform: translateY(-2px);
+    }
+
+    .github-project-button img {
+        width: 20px;
+        height: 20px;
+    }
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+    .featured-project-card {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-project-right h3 {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .featured-thumbnail-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .featured-buttons {
+        align-items: stretch;
+        grid-template-columns: 1fr;
+    }
+
+    .featured-project-right h3 {
+        font-size: 2rem;
+        justify-content: center;
+    }
+}
+
+/* =========================================
+   MEDICLEAR CARD LAYOUT
+========================================= */
+
+.mediclear-card {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    overflow: hidden;
+}
+
+.mediclear-left {
+    width: 38%;
+    z-index: 2;
+}
+
+.mediclear-right {
+    width: 62%;
+    position: relative;
+    height: 640px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================================
+   PHONE CAROUSEL
+========================================= */
+
+.phone-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* =========================================
+   INDIVIDUAL PHONE CARDS
+========================================= */
+
+.phone-card {
+    position: absolute;
+    top: 50%;
+    width: 280px;
+    height: 560px;
+    transition: left 0.65s cubic-bezier(0.22, 1, 0.36, 1), transform 0.65s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.45s ease;
+    will-change: transform, left, opacity;
+}
+
+    .phone-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+        display: block;
+        overflow: hidden;
+    }
+
+/* =========================================
+   POSITIONING
+========================================= */
+
+/* CENTER */
+
+.phone-center {
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(0deg) scale(1);
+    opacity: 1;
+    z-index: 5;
+}
+
+/* LEFT 1 */
+
+.phone-left-1 {
+    left: 26%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(-8deg) scale(0.88);
+    opacity: 0.8;
+    z-index: 4;
+}
+
+/* LEFT 2 */
+
+.phone-left-2 {
+    left: 10%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(-14deg) scale(0.76);
+    opacity: 0.45;
+    z-index: 3;
+}
+
+/* RIGHT 1 */
+
+.phone-right-1 {
+    left: 74%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(8deg) scale(0.88);
+    opacity: 0.8;
+    z-index: 4;
+}
+
+/* RIGHT 2 */
+
+.phone-right-2 {
+    left: 90%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(14deg) scale(0.76);
+    opacity: 0.45;
+    z-index: 3;
+}
+
+/* =========================================
+   ARROWS
+========================================= */
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(10,10,20,0.85);
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    z-index: 20;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+    .carousel-arrow:hover {
+        background: #2563eb;
+        transform: translateY(-50%) scale(1.08);
+    }
+
+    .carousel-arrow.left {
+        left: 0;
+    }
+
+    .carousel-arrow.right {
+        right: 0;
+    }
+
+/* =========================================
+   HIDDEN CARDS
+========================================= */
+
+.phone-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) scale(0.6);
+    z-index: 1;
+}
+
+/* =========================================
+   MEDICLEAR ACCENT COLOR
+========================================= */
+
+.mediclear-label {
+    color: #0080FE;
+}
+
+.mediclear-features h4 {
+    color: #0080FE;
+}
+
+.mediclear-features ul li::before {
+    color: #0080FE;
+}
+
+.mediclear-button {
+    background: #0080FE;
+    color: white;
+}
+
+    .mediclear-button:hover {
+        background: #0080FE;
+        color: white;
+    }
+
+/* =========================================
+   MEDICLEAR TITLE
+========================================= */
+
+.mediclear-title {
+    font-size: 2.25rem;
+    line-height: 1.05;
+    font-weight: 700;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+/* =========================================
+   AMAZON ACCENT COLOR
+========================================= */
+
+.featured-project-card-amazon .featured-label {
+    color: #facc15;
+}
+
+.featured-project-card-amazon .featured-features h4 {
+    color: #facc15;
+}
+
+.featured-project-card-amazon .featured-features ul li::before {
+    color: #facc15;
+}
