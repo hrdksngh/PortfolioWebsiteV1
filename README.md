@@ -1,16 +1,153 @@
-# React + Vite
+```md
+# Hardik Singh — Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A cinematic dark-themed portfolio website built to showcase my work across frontend development, game development, investigative research, video editing, and creative technology.
 
-Currently, two official plugins are available:
+This project was designed to merge immersive visual presentation with structured project documentation, creating a portfolio experience inspired by indie game studio websites, cinematic interfaces, and modern creative-tech portfolios.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This portfolio serves as a central hub for:
+- Frontend development projects
+- Unreal Engine and gameplay programming work
+- 3D environment studies and game art
+- Video editing and visual storytelling
+- Research and investigative work
 
-## Expanding the ESLint configuration
+The website is built with a strong focus on:
+- atmosphere-driven UI design
+- responsive layouts
+- modular React architecture
+- clean visual hierarchy
+- immersive dark-themed presentation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Features
+
+- Cinematic hero interface
+- Interactive section navigation
+- Modular React component architecture
+- Responsive project showcase layouts
+- Custom-designed UI system
+- Dynamic category-based project sections
+- Dark-themed visual identity
+- Project-focused portfolio structure
+
+---
+
+## Tech Stack
+
+### Frontend
+- React
+- JavaScript
+- CSS3
+
+### Design & UI
+- Custom CSS
+- Responsive Layout Systems
+- Flexbox & CSS Grid
+- Gradient-based visual styling
+
+### Tools
+- Git
+- GitHub
+- Visual Studio Code
+
+---
+
+## Project Structure
+
+```plaintext
+src/
+│
+├── assets/
+│
+├── components/
+│   ├── web/
+│   ├── game/
+│   ├── art/
+│   ├── software/
+│   ├── video/
+│   └── research/
+│
+├── App.jsx
+├── App.css
+└── main.jsx
+```
+
+---
+
+## Sections
+
+### About
+Background, technical skills, roles, and education.
+
+### Projects
+Includes:
+- Web Development
+- Game Development
+- Art & Visual Development
+- Software Systems
+
+### Video Editing
+Cinematic editing and visual storytelling work.
+
+### Investigative Work
+Research-oriented analytical and investigative workflows.
+
+---
+
+## Current Status
+
+The portfolio is actively evolving.
+
+Additional gameplay programming, Unreal Engine systems, software tools, and creative technology projects are currently in development and will continue to be added over time.
+
+---
+
+## Design Direction
+
+The visual identity of the site is inspired by:
+- cinematic interfaces
+- indie game studio websites
+- noir/cyberpunk atmosphere
+- editorial portfolio layouts
+- investigative visual storytelling
+
+The goal was to create a portfolio that feels:
+- immersive
+- atmospheric
+- structured
+- modern
+while remaining readable and professionally focused.
+
+---
+
+## Running Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/hrdksngh/PortfolioWebsiteV1.git
+```
+
+Navigate into the project:
+
+```bash
+cd PortfolioWebsiteV1
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
