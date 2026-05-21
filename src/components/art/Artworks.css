@@ -1,0 +1,250 @@
+
+/* MAIN CARD */
+
+.artwork-showcase-card {
+    width: 90%;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-top: 4rem;
+}
+
+/* LEFT */
+
+.artwork-left {
+    text-align: left;
+    flex: 1;
+}
+
+.artwork-text-content h3 {
+    font-size: 2.25rem;
+    color: white;
+    margin-bottom: 1.1rem;
+    position: relative;
+    display: inline-block;
+    padding-top: 1.1rem;
+}
+
+.artwork-text-content h3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 810px;
+    height: 2px;
+    background: #9b6dff;
+    box-shadow: 0 0 12px rgba(155,109,255,0.5);
+}
+
+.artwork-type {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 0.7rem;
+}
+
+.artwork-type span {
+    color: white;
+    font-weight: 700;
+}
+
+.artwork-software {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 1rem;
+}
+
+.artwork-software span {
+    color: white;
+    font-weight: 700;
+}
+
+.artwork-main-image {
+    width: 100%;
+    border: 1px solid rgba(155,109,255,0.5);
+    border-radius: 1rem;
+    overflow: hidden;
+    background: rgba(255,255,255,0.03);
+    box-shadow: 0 0 40px rgba(155,109,255,0.08);
+}
+
+.artwork-main-image img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* RIGHT THUMBNAILS */
+
+.artwork-thumbnail-column {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    margin-top: 9rem;
+}
+
+.artwork-thumbnail {
+    border: 2px solid transparent;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+    .artwork-thumbnail:hover {
+        transform: translateY(-4px);
+    }
+
+    .artwork-thumbnail.active {
+        border-color: #9b6dff;
+        box-shadow: 0 0 25px rgba(155,109,255,0.35);
+    }
+
+    .artwork-thumbnail img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+
+    .artwork-showcase-card {
+        flex-direction: column;
+    }
+
+    .artwork-thumbnail-column {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .artwork-thumbnail {
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .artwork-text-content h3 {
+        font-size: 2rem;
+    }
+
+    .project-category-header h2 {
+        font-size: 2.4rem;
+    }
+
+    .artwork-thumbnail-column {
+        flex-direction: column;
+    }
+}
+
+/* Experimental */
+
+/* =========================
+   INFO CARDS SECTION
+========================= */
+
+.artwork-info-cards {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 90%;
+}
+
+.artwork-info-card {
+    flex: 1;
+    background: linear-gradient( 180deg, rgba(18, 18, 30, 0.92), rgba(8, 8, 16, 0.96) );
+    border: 1px solid rgba(160, 120, 255, 0.18);
+    border-radius: 22px;
+    padding: 1.6rem;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 25px rgba(120, 80, 255, 0.08), inset 0 0 25px rgba(255, 255, 255, 0.015);
+    min-height: 180px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artwork-info-description {
+    flex: 1.2;
+}
+
+.artwork-info-skills {
+    flex: 0.8;
+}
+
+.artwork-info-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(180, 130, 255, 0.4);
+    box-shadow: 0 0 30px rgba(140, 100, 255, 0.14), inset 0 0 25px rgba(255, 255, 255, 0.02);
+}
+
+/* TITLE */
+
+.artwork-card-title {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.artwork-card-title h4 {
+    color: #b87cff;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+/* ICON */
+
+.artwork-card-icon {
+    font-size: 2rem;
+    color: #a970ff;
+}
+
+/* DIVIDER */
+
+.artwork-card-divider {
+    width: 100%;
+    height: 1px;
+    margin: 1rem 0 0.8rem 0;
+    background: linear-gradient( 90deg, #b87cff, transparent );
+}
+
+/* CARD TEXT */
+
+.artwork-info-card p,
+.artwork-info-card li {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1rem;
+    line-height: 2rem;
+    text-align: left;
+}
+
+.artwork-info-card ul {
+    padding-left: 1.3rem;
+}
+
+.artwork-info-card li {
+    margin-bottom: 0.8rem;
+    line-height: 1rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+
+    .artwork-info-cards {
+        flex-direction: column;
+    }
+
+    .artwork-info-card {
+        width: 100%;
+    }
+}
+
+.full-card {
+    transform: scale(1);
+}

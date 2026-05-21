@@ -89,7 +89,7 @@ function WebProjects() {
           </p>
 
           <h3>
-            Portfolio Interface
+            Portfilio Website V1
           </h3>
 
           <p className="featured-description">
@@ -134,7 +134,7 @@ function WebProjects() {
               rel="noreferrer"
               className="live-demo-button"
             >
-              Live Demo ↗
+              Live ↗
             </a>
 
             <a
@@ -242,7 +242,7 @@ function WebProjects() {
               rel="noreferrer"
               className="live-demo-button"
             >
-              Live Demo ↗
+              Live ↗
             </a>
 
             <a

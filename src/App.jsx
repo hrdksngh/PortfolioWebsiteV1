@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import {FaUser, FaCode, FaVideo, FaSearch} from "react-icons/fa";
+import {FaUser, FaCode, FaVideo, FaSearch, FaUserAlt, FaBullseye, FaGraduationCap,} from "react-icons/fa";
 
 import HeroBanner from "./assets/HeroBanner.png";
 import PortfolioBackground from "./assets/PortfolioBackground.png";
@@ -9,6 +9,12 @@ import LinkedInLogo from "./assets/linkedin-logo.png";
 import GitHubLogo from "./assets/github-logo.png";
 
 import WebProjects from "./components/web/WebProjects";
+import GameDev from "./components/game/GameDev";
+import Artworks from "./components/art/Artworks";
+import Software from "./components/software/Software";
+
+import Video from "./components/video/Video";
+import PI from "./components/pi/PI";
 
 function App() {
   const [activeTab, setActiveTab] = useState("about");
@@ -43,94 +49,16 @@ function App() {
   switch (activeProjectSection) {
 
     case "web":
-        return <WebProjects />;;
+        return <WebProjects />;
 
     case "game":
-      return (
-        <>
-          <h2>Game Development</h2>
-
-          <p>
-            Gameplay systems, Unreal Engine exploration,
-            interactive storytelling, and mechanics research.
-          </p>
-
-          <div className="project-grid">
-
-            <div className="project-card">
-              <div className="project-image"></div>
-
-              <div className="project-info">
-                <h3>Gameplay Systems</h3>
-
-                <p>
-                  Experimentation with mechanics,
-                  interaction systems, and worldbuilding.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </>
-      );
+      return <GameDev />;
 
     case "art":
-      return (
-        <>
-          <h2>Art & Visual Development</h2>
-
-          <p>
-            Concept studies, visual atmosphere,
-            cinematic compositions, and environmental design.
-          </p>
-
-          <div className="project-grid">
-
-            <div className="project-card">
-              <div className="project-image"></div>
-
-              <div className="project-info">
-                <h3>Concept Frames</h3>
-
-                <p>
-                  Visual storytelling through cinematic
-                  composition and mood exploration.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </>
-      );
+      return <Artworks />;
 
     case "software":
-      return (
-        <>
-          <h2>Software Systems</h2>
-
-          <p>
-            Technical tools, utilities, AI experimentation,
-            and analytical systems.
-          </p>
-
-          <div className="project-grid">
-
-            <div className="project-card">
-              <div className="project-image"></div>
-
-              <div className="project-info">
-                <h3>AI Utilities</h3>
-
-                <p>
-                  Experimental tools focused on
-                  automation and intelligent workflows.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </>
-      );
+      return <Software />;
 
     default:
       return null;
@@ -197,7 +125,10 @@ function App() {
 
       <div className="about-right">
         <div className="about-section">
-          <h2>Profile Summary</h2>
+          <h2 className="section-heading">
+            <FaUserAlt className="section-heading-icon" />
+            Profile Summary
+          </h2>
 
           <p>
             Creative technical generalist with a background in
@@ -215,49 +146,103 @@ function App() {
           </p>
         </div>
 
+       <div className="about-section">
+  <h2 className="skills-heading">
+    <FaCode className="skills-heading-icon" />
+    Technical Skills
+  </h2>
+
+  <div className="skills-grid">
+
+    <div className="skill-card">
+      <div className="skill-icon purple">📦</div>
+
+      <div className="skill-content">
+        <h3>Game Development</h3>
+
+        <p>
+          Unreal Engine 5, C++,
+          Gameplay Programming
+        </p>
+      </div>
+    </div>
+
+    <div className="skill-card">
+      <div className="skill-icon blue">C++</div>
+
+      <div className="skill-content">
+        <h3>Programming Languages</h3>
+
+        <p>
+          C++, JavaScript
+        </p>
+      </div>
+    </div>
+
+    <div className="skill-card">
+      <div className="skill-icon green">🌐</div>
+
+      <div className="skill-content">
+        <h3>Web Technologies</h3>
+
+        <p>
+          HTML5, CSS, JavaScript,
+          React
+        </p>
+      </div>
+    </div>
+
+    <div className="skill-card">
+      <div className="skill-icon yellow">🔧</div>
+
+      <div className="skill-content">
+        <h3>Development Tools</h3>
+
+        <p>
+          Git/Version Control,
+          Visual Studio,
+          Debugging Tools
+        </p>
+      </div>
+    </div>
+
+    <div className="skill-card">
+      <div className="skill-icon purple">🎬</div>
+
+      <div className="skill-content">
+        <h3>Creative Production</h3>
+
+        <p>
+          Video Editing,
+          Photography,
+          Content Writing,
+          Project Direction
+        </p>
+      </div>
+    </div>
+
+    <div className="skill-card">
+      <div className="skill-icon red">🧠</div>
+
+      <div className="skill-content">
+        <h3>Core Competencies</h3>
+
+        <p>
+          OOP, Data Structures &
+          Algorithms, Problem Solving,
+          Visual Storytelling
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
         <div className="about-section">
-          <h2>Technical Skills</h2>
-
-          <ul className="details-list">
-            <li>
-              <strong>Game Development: </strong>
-              Unreal Engine 5, C++, Gameplay Programming
-              Fundamentals, Blueprint Visual Scripting
-            </li>
-
-            <li>
-              <strong>Programming Languages: </strong>
-              C++, JavaScript
-            </li>
-
-            <li>
-              <strong>Web Technologies: </strong>
-              HTML5, CSS, JavaScript, React
-            </li>
-
-            <li>
-              <strong>Development Tools: </strong>
-              Git/Version Control, Visual Studio,
-              Debugging Tools
-            </li>
-
-            <li>
-              <strong>Creative Production: </strong>
-              Video Editing, Photography,
-              Content Writing, Project Direction
-            </li>
-
-            <li>
-              <strong>Core Competencies: </strong>
-              Object-Oriented Programming,
-              Data Structures & Algorithms,
-              Problem-Solving, Visual Storytelling
-            </li>
-          </ul>
-        </div>
-
-        <div className="about-section">
-          <h2>Targeting Roles</h2>
+            <h2 className="section-heading">
+                <FaBullseye className="section-heading-icon" />
+                Targeting Roles
+            </h2>
 
           <div className="roles-list">
             <span>Gameplay Programmer</span>
@@ -269,22 +254,79 @@ function App() {
         </div>
 
         <div className="about-section">
-          <h2>Education</h2>
+  <h2 className="section-heading">
+    <FaGraduationCap className="section-heading-icon education-icon" />
+    Education
+  </h2>
 
-          <ul className="details-list">
-            <li>
-              <strong>HSC: </strong>
+  <div className="education-grid">
+
+    {/* HSC */}
+
+    <div className="education-card">
+
+      <div className="education-top">
+
+        <div className="education-left">
+
+          <div className="education-icon-box">
+            🎓
+          </div>
+
+          <div className="education-content">
+            <h3>HSC</h3>
+
+            <p>
               Central Board of Secondary Education
-              (2021)
-            </li>
+            </p>
+          </div>
 
-            <li>
-              <strong>B.Tech (CSE): </strong>
-              Gurugobind Singh Indraprastha
-              University (2025)
-            </li>
-          </ul>
         </div>
+
+        <div className="education-year">
+          2021
+        </div>
+
+      </div>
+
+      <div className="education-line"></div>
+
+    </div>
+
+    {/* BTECH */}
+
+    <div className="education-card">
+
+      <div className="education-top">
+
+        <div className="education-left">
+
+          <div className="education-icon-box">
+            🏛
+          </div>
+
+          <div className="education-content">
+            <h3>B.Tech (CSE)</h3>
+
+            <p>
+              Gurugobind Singh Indraprastha University
+            </p>
+          </div>
+
+        </div>
+
+        <div className="education-year">
+          2025
+        </div>
+
+      </div>
+
+      <div className="education-line"></div>
+
+    </div>
+
+  </div>
+</div>
       </div>
     </div>
   );
@@ -353,83 +395,9 @@ function App() {
     </div>
   );
 
-      case "video":
-        return (
-          <div className="content-panel">
-            <h2>Video</h2>
+      case "video": return <Video />;
 
-            <p>
-              Atmosphere-driven editing, cinematic pacing, visual storytelling,
-              and emotionally focused digital narratives.
-            </p>
-
-            <div className="project-grid">
-              <div className="project-card">
-                <div className="project-image"></div>
-
-                <div className="project-info">
-                  <h3>Cinematic Editing</h3>
-
-                  <p>
-                    Story-focused editing with noir-inspired pacing and mood.
-                  </p>
-                </div>
-              </div>
-
-              <div className="project-card">
-                <div className="project-image"></div>
-
-                <div className="project-info">
-                  <h3>Visual Narratives</h3>
-
-                  <p>
-                    Combining atmosphere, motion, and sound-driven storytelling.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        );
-
-      case "research":
-        return (
-          <div className="content-panel">
-            <h2>Research</h2>
-
-            <p>
-              Investigative workflows, analytical systems, pattern recognition,
-              and research-oriented creative exploration.
-            </p>
-
-            <div className="project-grid">
-              <div className="project-card">
-                <div className="project-image"></div>
-
-                <div className="project-info">
-                  <h3>Case Analysis</h3>
-
-                  <p>
-                    Investigative frameworks focused on digital research and
-                    analytical exploration.
-                  </p>
-                </div>
-              </div>
-
-              <div className="project-card">
-                <div className="project-image"></div>
-
-                <div className="project-info">
-                  <h3>Research Systems</h3>
-
-                  <p>
-                    Organizing information and uncovering hidden connections
-                    across complex narratives.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        );
+      case "research": return <PI />;
 
       default:
         return null;

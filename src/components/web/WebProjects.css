@@ -7,32 +7,32 @@
     margin-bottom: 3rem;
 }
 
-    .project-category-header h2 {
-        display: inline-block;
-        margin-bottom: 1.2rem;
-        padding-bottom: 0.7rem;
-        font-size: 2rem;
-        letter-spacing: 1px;
-        position: relative;
-    }
+.project-category-header h2 {
+    display: inline-block;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.7rem;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    position: relative;
+}
 
-        .project-category-header h2::after {
-            content: "";
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translateX(-50%);
-            width: 120%;
-            height: 2px;
-            background: linear-gradient( 90deg, rgba(255,145,90,0.95), rgba(160,120,255,0.35) );
-        }
+.project-category-header h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 2px;
+    background: linear-gradient( 90deg, rgba(255,145,90,0.95), rgba(160,120,255,0.35) );
+}
 
-    .project-category-header p {
-        max-width: 720px;
-        margin: 0 auto;
-        color: rgba(255,255,255,0.62);
-        line-height: 1.9;
-    }
+.project-category-header p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: rgba(255,255,255,0.62);
+    line-height: 1.9;
+}
 
 /* =========================
    FEATURED CARD
