@@ -1,3 +1,4 @@
+{/*My Mobile View: 444x869*/}
 import { useState } from "react";
 import "./App.css";
 import {FaUser, FaCode, FaVideo, FaSearch, FaUserAlt, FaBullseye, FaGraduationCap,} from "react-icons/fa";
@@ -119,6 +120,82 @@ function App() {
             </a>
           </div>
         </div>
+        <div className="about-section roles-mobile-mid">
+            <h2 className="section-heading">
+                <FaBullseye className="section-heading-icon" />
+                Targeting Roles
+            </h2>
+
+          <div className="roles-list">
+            <span>Gameplay Programmer</span>
+
+            <span>3D Artist (Props/Env)</span>
+
+            <span>Developer (C++/AIML)</span>
+          </div>
+        </div>
+
+        <div className="about-section education-mobile-mid">
+
+  <h2 className="section-heading">
+    <FaGraduationCap className="section-heading-icon education-icon" />
+    Education
+  </h2>
+
+  <div className="education-timeline">
+
+    {/* ITEM 1 */}
+
+    <div className="timeline-item">
+
+    <div className="timeline-icon">
+        <FaGraduationCap />
+    </div>
+
+    <div className="timeline-dot"></div>
+    <div className="timeline-line"></div>
+
+    <div className="timeline-content">
+
+        <div className="timeline-top">
+            <h3>HSC</h3>
+            <p>Central Board of Secondary Education</p>
+        </div>
+
+        <span className="timeline-year">2021</span>
+
+    </div>
+
+</div>
+
+    {/* ITEM 2 */}
+
+    <div className="timeline-item">
+
+    <div className="timeline-icon">
+        <FaGraduationCap />
+    </div>
+
+    <div className="timeline-dot"></div>
+    <div className="timeline-line"></div>
+
+    <div className="timeline-content">
+
+        <div className="timeline-top">
+            <h3>B.Tech (CSE)</h3>
+            <p>Gurugobind Singh Indraprastha University</p>
+        </div>
+
+        <span className="timeline-year">2025</span>
+
+    </div>
+
+</div>
+
+  </div>
+
+</div>
+
       </div>
 
       {/* RIGHT SIDE */}
@@ -238,7 +315,7 @@ function App() {
   </div>
 </div>
 
-        <div className="about-section">
+        <div className="about-section roles-desktop">
             <h2 className="section-heading">
                 <FaBullseye className="section-heading-icon" />
                 Targeting Roles
@@ -253,7 +330,8 @@ function App() {
           </div>
         </div>
 
-        <div className="about-section">
+
+        <div className="about-section education-desktop">
   <h2 className="section-heading">
     <FaGraduationCap className="section-heading-icon education-icon" />
     Education
@@ -454,6 +532,59 @@ function App() {
       <section className="content-section">
         <div className="content-container">{renderContent()}</div>
       </section>
+
+
+
+
+
+
+
+
+
+
+      <div className="mobile-bottom-nav">
+
+  <button
+    className={`mobile-nav-item ${
+      activeTab === "about" ? "active" : ""
+    }`}
+    onClick={() => setActiveTab("about")}
+  >
+    <FaUser />
+    <span>About</span>
+  </button>
+
+  <button
+    className={`mobile-nav-item ${
+      activeTab === "development" ? "active" : ""
+    }`}
+    onClick={() => setActiveTab("development")}
+  >
+    <FaCode />
+    <span>Projects</span>
+  </button>
+
+  <button
+    className={`mobile-nav-item ${
+      activeTab === "video" ? "active" : ""
+    }`}
+    onClick={() => setActiveTab("video")}
+  >
+    <FaVideo />
+    <span>Editing</span>
+  </button>
+
+  <button
+    className={`mobile-nav-item ${
+      activeTab === "research" ? "active" : ""
+    }`}
+    onClick={() => setActiveTab("research")}
+  >
+    <FaSearch />
+    <span>Investigative</span>
+  </button>
+
+</div>
     </div>
   );
 }
