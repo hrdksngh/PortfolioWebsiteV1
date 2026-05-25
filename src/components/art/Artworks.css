@@ -109,39 +109,6 @@
         object-fit: cover;
     }
 
-/* RESPONSIVE */
-
-@media (max-width: 1100px) {
-
-    .artwork-showcase-card {
-        flex-direction: column;
-    }
-
-    .artwork-thumbnail-column {
-        width: 100%;
-        flex-direction: row;
-    }
-
-    .artwork-thumbnail {
-        flex: 1;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .artwork-text-content h3 {
-        font-size: 2rem;
-    }
-
-    .project-category-header h2 {
-        font-size: 2.4rem;
-    }
-
-    .artwork-thumbnail-column {
-        flex-direction: column;
-    }
-}
-
 /* Experimental */
 
 /* =========================
@@ -234,17 +201,307 @@
    RESPONSIVE
 ========================= */
 
-@media (max-width: 1200px) {
 
-    .artwork-info-cards {
-        flex-direction: column;
+@media (min-width: 1101px) and (max-width: 1600px) {
+
+    .artwork-showcase-card {
+        gap: clamp(1.1rem, 2vw, 2rem);
+        align-items: center;
     }
 
-    .artwork-info-card {
-        width: 100%;
+    .artwork-thumbnail-column {
+        width: clamp(190px, 18vw, 280px);
+        gap: clamp(0.75rem, 1.2vw, 1.3rem);
+        align-self: center;
+    }
+
+    .artwork-thumbnail {
+        border-radius: clamp(0.65rem, 1vw, 1rem);
+    }
+
+    .artwork-thumbnail img {
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
     }
 }
 
-.full-card {
-    transform: scale(1);
+
+/* =========================
+   TABLET / SMALL LAPTOP
+   700PX - 1100PX ONLY
+========================= */
+
+@media (min-width: 701px) and (max-width: 1300px) {
+
+    .artwork-showcase-card {
+        width: 90%;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 3rem;
+    }
+
+    .artwork-left {
+        width: 100%;
+        flex: none;
+    }
+
+    .artwork-text-content h3 {
+        font-size: clamp(1.9rem, 3.4vw, 2.25rem);
+        margin-bottom: 0.8rem;
+        padding-top: 1rem;
+    }
+
+        .artwork-text-content h3::before {
+            width: 100%;
+        }
+
+    .artwork-type,
+    .artwork-software {
+        font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+        margin-bottom: 0.55rem;
+    }
+
+    /* Main image stays large */
+    .artwork-main-image {
+        width: 100%;
+        border-radius: 1rem;
+    }
+
+        .artwork-main-image img {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+
+    /* Thumbnails become small row under main image */
+    .artwork-thumbnail-column {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.8rem;
+        margin-top: 0;
+    }
+
+    .artwork-thumbnail {
+        flex: 0 0 31%;
+        max-width: 180px;
+        border-radius: 0.75rem;
+    }
+
+        .artwork-thumbnail img {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+
+    /* Description + Skills side by side */
+    .artwork-info-cards {
+        width: 90%;
+        flex-direction: row;
+        align-items: stretch;
+        gap: 1rem;
+        margin-top: 1.4rem;
+    }
+
+    .artwork-info-description {
+        flex: 1.55;
+    }
+
+    .artwork-info-skills {
+        flex: 0.85;
+    }
+
+    .artwork-info-card {
+        width: auto;
+        min-height: auto;
+        padding: 1rem;
+        border-radius: 18px;
+    }
+
+    .artwork-card-title {
+        gap: 0.3rem;
+    }
+
+        .artwork-card-title h4 {
+            font-size: clamp(0.95rem, 1.9vw, 1.15rem);
+            line-height: 1.2;
+        }
+
+    .artwork-card-icon {
+        font-size: 1.35rem;
+    }
+
+    .artwork-card-divider {
+        margin: 0.7rem 0;
+    }
+
+    .artwork-info-card p,
+    .artwork-info-card li {
+        font-size: clamp(0.72rem, 1.45vw, 0.88rem);
+        line-height: 1.55;
+    }
+
+    .artwork-info-card ul {
+        padding-left: 1rem;
+    }
+
+    .artwork-info-card li {
+        margin-bottom: 0.45rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   MOBILE ONLY: BELOW 700PX
+========================= */
+
+.artwork-mobile-arrow {
+    display: none;
+}
+
+@media (max-width: 700px) {
+
+    .artwork-showcase-card {
+        width: 88%;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .artwork-left {
+        width: 100%;
+    }
+
+    .artwork-text-content h3 {
+        font-size: clamp(1.35rem, 6vw, 1.75rem);
+        white-space: nowrap;
+        margin-bottom: 0.7rem;
+        padding-top: 0.8rem;
+        line-height: 1.05;
+    }
+
+        .artwork-text-content h3::before {
+            width: 100%;
+        }
+
+    .artwork-type,
+    .artwork-software {
+        font-size: clamp(0.78rem, 3.2vw, 0.95rem);
+        white-space: nowrap;
+        margin-bottom: 0.45rem;
+        line-height: 1.25;
+    }
+
+    .artwork-main-image {
+        position: relative;
+        border-radius: 0.8rem;
+    }
+
+        .artwork-main-image img {
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+
+    .artwork-thumbnail-column {
+        display: none;
+    }
+
+    .artwork-mobile-arrow {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        border: 1px solid rgba(155, 109, 255, 0.8);
+        background: rgba(8, 8, 16, 0.75);
+        color: white;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        line-height: 1;
+        cursor: pointer;
+        backdrop-filter: blur(8px);
+        box-shadow: 0 0 18px rgba(155, 109, 255, 0.35);
+    }
+
+    .artwork-mobile-arrow-left {
+        left: 0.5rem;
+    }
+
+    .artwork-mobile-arrow-right {
+        right: 0.5rem;
+    }
+
+    .artwork-info-cards {
+        width: 88%;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1.4rem;
+        align-items: stretch;
+    }
+
+    .artwork-info-description,
+    .artwork-info-skills {
+        flex: none;
+        width: 100%;
+    }
+
+    .artwork-info-card {
+        min-height: auto;
+        padding: 0.9rem;
+        border-radius: 16px;
+    }
+
+    .artwork-card-title {
+        gap: 0.25rem;
+        align-items: center;
+    }
+
+        .artwork-card-title h4 {
+            font-size: clamp(0.8rem, 3.4vw, 1rem);
+            white-space: nowrap;
+        }
+
+    .artwork-card-icon {
+        font-size: 1.15rem;
+    }
+
+    .artwork-card-divider {
+        margin: 0.6rem 0;
+    }
+
+    .artwork-info-card p,
+    .artwork-info-card li {
+        font-size: clamp(0.62rem, 2.6vw, 0.78rem);
+        line-height: 1.55;
+    }
+
+    .artwork-info-card ul {
+        padding-left: 0.85rem;
+    }
+
+    .artwork-info-card li {
+        margin-bottom: 0.35rem;
+        line-height: 1.25;
+    }
 }

@@ -34,7 +34,10 @@ function WebProjects() {
 	const featuredImagesFund = [FundFoundPrev1, FundFoundPrev2, FundFoundPrev3, FundFoundPrev4];
 	const mediClearImages = [MediClearFauxPrev1, MediClearFauxPrev2, MediClearFauxPrev3, MediClearFauxPrev4, MediClearFauxPrev5, MediClearFauxPrev6];
 	const featuredImagesAmazon = [AmazonClonePrev1, AmazonClonePrev2, AmazonClonePrev3, AmazonClonePrev4];
-	const [activeMediClearIndex, setActiveMediClearIndex] = useState(0);
+	const [activeMediClearIndex, setActiveMediClearIndex] = useState(0);    const handleFeaturedImageSwitch = (images, activeImage, setActiveImage, direction) => {
+    const currentIndex = images.indexOf(activeImage);
+
+    const nextIndex = direction === "next" ? (currentIndex + 1) % images.length : (currentIndex - 1 + images.length) % images.length; setActiveImage(images[nextIndex]);};
 
 	return (
 	<>
@@ -56,11 +59,38 @@ function WebProjects() {
         <div className="featured-project-left">
 
           <div className="featured-main-image">
-            <img
-                src={activeFeaturedImage1}
-                alt="Portfolio Project"
-            />
-          </div>
+            <button
+                className="featured-image-arrow featured-image-arrow-left"
+                onClick={() =>
+                    handleFeaturedImageSwitch(
+                        featuredImagesPort,
+                        activeFeaturedImage1,
+                        setActiveFeaturedImage1,
+                        "prev"
+                    )
+                }
+                aria-label="Previous image"
+                >
+                ‹
+            </button>
+
+            <img src={activeFeaturedImage1} alt="Portfolio Project" />
+
+            <button
+                className="featured-image-arrow featured-image-arrow-right"
+                onClick={() =>
+                    handleFeaturedImageSwitch(
+                        featuredImagesPort,
+                        activeFeaturedImage1,
+                        setActiveFeaturedImage1,
+                        "next"
+                    )
+                }
+                aria-label="Next image"
+                >
+                ›
+            </button>
+        </div>
 
           <div className="featured-thumbnail-row">
 
@@ -129,7 +159,7 @@ function WebProjects() {
           <div className="featured-buttons">
 
             <a
-              href="https://github.com/hrdksngh"
+              href="https://hrdksngh.pages.dev/"
               target="_blank"
               rel="noreferrer"
               className="live-demo-button"
@@ -138,7 +168,7 @@ function WebProjects() {
             </a>
 
             <a
-              href="https://github.com/hrdksngh"
+              /* href=""  PortfolioWebsiteV1 repo must be private for now */
               target="_blank"
               rel="noreferrer"
               className="github-project-button"
@@ -148,7 +178,7 @@ function WebProjects() {
                 alt="GitHub"
               />
 
-              GitHub
+              GitHub 🔒
             </a>
 
           </div>
@@ -164,11 +194,37 @@ function WebProjects() {
         <div className="featured-project-left">
 
           <div className="featured-main-image">
-            <img
-                src={activeFeaturedImage2}
-                alt="Portfolio Project"
-            />
-          </div>
+            <button
+                className="featured-image-arrow featured-image-arrow-left"
+                onClick={() =>
+                    handleFeaturedImageSwitch(
+                        featuredImagesFund,
+                        activeFeaturedImage2,
+                        setActiveFeaturedImage2,
+                        "prev"
+                    )
+                }
+                aria-label="Previous image">
+            ‹
+            </button>
+
+            <img src={activeFeaturedImage2} alt="Portfolio Project" />
+
+            <button
+                className="featured-image-arrow featured-image-arrow-right"
+                onClick={() =>
+                        handleFeaturedImageSwitch(
+                        featuredImagesFund,
+                        activeFeaturedImage2,
+                        setActiveFeaturedImage2,
+                        "next"
+                    )
+                }
+                aria-label="Next image"
+                >
+                ›
+            </button>
+           </div>
 
           <div className="featured-thumbnail-row">
 
@@ -237,7 +293,7 @@ function WebProjects() {
           <div className="featured-buttons">
 
             <a
-              href="https://github.com/hrdksngh"
+              href="https://fundingfounders.in/"
               target="_blank"
               rel="noreferrer"
               className="live-demo-button"
@@ -246,7 +302,7 @@ function WebProjects() {
             </a>
 
             <a
-              href="https://github.com/hrdksngh"
+              /*href=""  Repo locked as per the owner */
               target="_blank"
               rel="noreferrer"
               className="github-project-button"
@@ -256,7 +312,7 @@ function WebProjects() {
                 alt="GitHub"
               />
 
-              GitHub
+              GitHub 🔒
             </a>
 
           </div>
@@ -319,14 +375,14 @@ function WebProjects() {
     <div className="featured-buttons">
 
       <a
-        href="#"
+        /*href="" Prototype not available as of now */
         className="live-demo-button mediclear-button"
       >
-        Prototype ↗
+        Prototype 🔒
       </a>
 
       <a
-        href="#"
+        href="https://github.com/hrdksngh/MediClearMVP"
         className="github-project-button"
       >
         <img
@@ -414,12 +470,39 @@ function WebProjects() {
 
         <div className="featured-project-left">
 
-          <div className="featured-main-image">
-            <img
-                src={activeFeaturedImage3}
-                alt="Portfolio Project"
-            />
-          </div>
+        <div className="featured-main-image">
+            <button
+                className="featured-image-arrow featured-image-arrow-left"
+                onClick={() =>
+                    handleFeaturedImageSwitch(
+                        featuredImagesAmazon,
+                            activeFeaturedImage3,
+                            setActiveFeaturedImage3,
+                            "prev"
+                    )
+                }
+                aria-label="Previous image"
+            >
+            ‹
+            </button>
+
+            <img src={activeFeaturedImage3} alt="Portfolio Project" />
+
+            <button
+                className="featured-image-arrow featured-image-arrow-right"
+                onClick={() =>
+                    handleFeaturedImageSwitch(
+                        featuredImagesAmazon,
+                        activeFeaturedImage3,
+                        setActiveFeaturedImage3,
+                        "next"
+                    )
+                }
+                aria-label="Next image"
+            >
+            ›
+            </button>
+        </div>
 
           <div className="featured-thumbnail-row">
 
@@ -487,7 +570,7 @@ function WebProjects() {
           <div className="featured-buttons">
 
             <a
-              href="https://github.com/hrdksngh"
+              href="https://github.com/hrdksngh/AmazonClone"
               target="_blank"
               rel="noreferrer"
               className="github-project-button"

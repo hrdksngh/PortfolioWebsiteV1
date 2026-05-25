@@ -581,7 +581,7 @@ function App() {
     onClick={() => setActiveTab("research")}
   >
     <FaSearch />
-    <span>Investigative</span>
+    <span>Investigative Work</span>
   </button>
 
 </div>

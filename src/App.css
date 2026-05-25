@@ -147,6 +147,10 @@ body {
     z-index: 3;
 }
 
+.mobile-bottom-nav{
+    display: none;
+}
+
 .tabs {
     width: min(1180px, 94vw);
     margin: 0 auto;

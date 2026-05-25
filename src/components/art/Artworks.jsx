@@ -16,6 +16,12 @@ function Artworks() {
   const [activeArtwork, setActiveArtwork] = useState(MusicRoom3DPrev1);
   const [deskArtwork, setDeskArtwork] = useState(Desk3DPrev1);
 
+  const changeImage = (images, activeImage, setActiveImage, direction) => {
+    const currentIndex = images.indexOf(activeImage);
+    const nextIndex = direction === "next" ? (currentIndex + 1) % images.length : (currentIndex - 1 + images.length) % images.length;
+    setActiveImage(images[nextIndex]);
+  };
+
   return (
     <>
       <div className="project-category-header">
@@ -52,12 +58,30 @@ function Artworks() {
           </div>
 
           <div className="artwork-main-image">
+            <button
+                className="artwork-mobile-arrow artwork-mobile-arrow-left"
+                onClick={() =>
+                    changeImage(artworkImages, activeArtwork, setActiveArtwork, "prev")
+                    }
+                aria-label="Previous artwork image"
+                >
+                ‹
+            </button>
 
             <img
-              src={activeArtwork}
-              alt="Music Studio Environment"
+                src={activeArtwork}
+                alt="Music Studio Environment"
             />
 
+            <button
+                className="artwork-mobile-arrow artwork-mobile-arrow-right"
+                onClick={() =>
+                    changeImage(artworkImages, activeArtwork, setActiveArtwork, "next")
+                }
+                aria-label="Next artwork image"
+                >
+                ›
+            </button>
           </div>
 
         </div>
@@ -174,12 +198,27 @@ function Artworks() {
           </div>
 
           <div className="artwork-main-image">
+            <button
+                className="artwork-mobile-arrow artwork-mobile-arrow-left"
+                onClick={() =>
+                    changeImage(deskImages, deskArtwork, setDeskArtwork, "prev")
+                }
+                aria-label="Previous artwork image"
+                >
+                ‹
+            </button>
 
-            <img
-              src={deskArtwork}
-              alt="Music Studio Environment"
-            />
+            <img src={deskArtwork} alt="Modern Desk"/>
 
+            <button
+                className="artwork-mobile-arrow artwork-mobile-arrow-right"
+                onClick={() =>
+                    changeImage(deskImages, deskArtwork, setDeskArtwork, "next")
+                }
+                aria-label="Next artwork image"
+                >
+                ›
+            </button>
           </div>
 
         </div>
