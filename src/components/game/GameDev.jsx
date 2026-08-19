@@ -121,6 +121,39 @@ const tools = [
   "Enhanced Input System",
 ];
 
+const moreProjects = [
+  {
+    number: "01",
+    title: "Responsive Gameplay HUD & Session End UI System",
+    linkLabel: "Link",
+    link: "https://github.com/hrdksngh/UE5ResponsiveHUDEndScreenn",
+    description:
+      "Event-driven responsive HUD with health, cargo, animated currency, timer, resolution-aware layouts and keyboard-navigable end-screen flow.",
+  },
+  {
+    number: "02",
+    title: "Persistent Options & Input Remapping System",
+    linkLabel: "Part of Super Ayuyu Link",
+    link: "https://hrdksngh.itch.io/super-ayuyu-demo",
+    description:
+      "Runtime display settings, persistent keyboard remapping, SaveGame-backed preferences, reset/apply workflow and reusable debug-collision controls.",
+  },
+  {
+    number: "03",
+    title: "Android Calculator",
+    linkLabel: "Link",
+    link: "https://github.com/hrdksngh/AndroidCalculatorr",
+    description:
+      "Android calculator developed as a compact C++ and UI implementation project inside Unreal Engine.",
+  },
+  {
+    number: "04",
+    title: "Bounce Tales 3D clone",
+    description:
+      "Physics-driven 3D ball controller with multiple ball modes, jumping, camera controls, grounded detection and reusable movement systems.",
+  },
+];
+
 function GameDev() {
   return (
     <section className="game-dev-page" aria-labelledby="game-dev-title">
@@ -139,7 +172,14 @@ function GameDev() {
         <div className="game-feature-copy">
           <div className="game-title-row">
             <h3>SUPER AYUYU</h3>
-            <span className="game-status">Gameplay Demo Coming Soon!</span>
+            <a
+                className="game-status"
+                href="https://hrdksngh.itch.io/super-ayuyu-demo"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                PLAY GAMEPLAY DEMO
+            </a>
           </div>
 
           <p className="game-meta">
@@ -269,10 +309,6 @@ function GameDev() {
             checkpoints, power-ups, enemy types, projectile combat, and reusable
             platform systems.
           </p>
-          <p>
-            <strong>Next up:</strong> Shock-bomb teleportation system and
-            additional visual effects.
-          </p>
         </section>
       </div>
 
@@ -327,6 +363,56 @@ function GameDev() {
           <img src={AyuyuPortfolioTakeAway} alt="Pixel-art Ayuyu character" />
         </section>
       </div>
+
+
+
+      {/* COMPLETELY SEPARATE SECTION STARTS HERE */}
+      <section className="more-projects-section">
+        <div className="section-divider more-projects-divider">
+          <span>MORE GAME DEVELOPMENT PROJECTS</span>
+        </div>
+
+        <p className="more-projects-intro">
+          Here are more projects, which I will later add properly on my website:
+        </p>
+
+        <div className="more-projects-panel">
+          {moreProjects.map((project) => (
+            <article className="more-project-row" key={project.title}>
+              <div className="more-project-number" aria-hidden="true">
+                {project.number}
+              </div>
+
+              <div className="more-project-content">
+                <h4 className="more-project-title">
+                  {project.title}
+                </h4>
+
+                <p className="more-project-description">
+                  {project.link ? (
+                    <>
+                      <a
+                        className="more-project-link"
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {project.linkLabel}
+                      </a>
+                      <span className="more-project-separator"> — </span>
+                    </>
+                  ) : (
+                    <span className="more-project-separator">— </span>
+                  )}
+
+                  {project.description}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+      {/* COMPLETELY SEPARATE SECTION ENDS HERE */}
     </section>
   );
 }
