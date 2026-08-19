@@ -133,7 +133,7 @@ const moreProjects = [
   {
     number: "02",
     title: "Persistent Options & Input Remapping System",
-    linkLabel: "Part of Super Ayuyu Link",
+    linkLabel: "Part of Super Ayuyu",
     link: "https://hrdksngh.itch.io/super-ayuyu-demo",
     description:
       "Runtime display settings, persistent keyboard remapping, SaveGame-backed preferences, reset/apply workflow and reusable debug-collision controls.",
